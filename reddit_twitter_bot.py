@@ -36,9 +36,6 @@ CONSUMER_SECRET = ''
 # Place the subreddit you want to look up posts from here
 SUBREDDIT_TO_MONITOR = 'Denmark'
 
-# Place the name of the folder where the images are downloaded
-IMAGE_DIR = 'img'
-
 # Place the name of the file to store the IDs of posts that have been posted
 POSTED_CACHE = 'posted_posts.txt'
 
