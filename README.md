@@ -1,17 +1,16 @@
 #reddit Twitter Bot
 
 A Python bot that looks up posts from reddit and automatically posts them on Twitter.
+This bot is fork that in this repo, is specifically configured for the subreddit /r/Denmark posts.
+This bot also has added flair detection and can add hashtags based on flairs.
 
-##Disclaimer
-
-I hold no liability for what you do with this script or what happens to you by using this script. Abusing this script *can* get you banned from Twitter, so make sure to read up on proper usage of the Twitter API.
 
 ##Dependencies
 
 You will need to install Python's [tweepy](https://github.com/tweepy/tweepy) and [PRAW](https://praw.readthedocs.org/en/) libraries first:
 
     pip install tweepy
-    pip install praw
+    pip install praw==3.6.0
     
 You will also need to create an app account on Twitter: [[instructions]](https://dev.twitter.com/apps)
 
@@ -25,10 +24,6 @@ You will also need to create an app account on Twitter: [[instructions]](https:/
 
 Once you edit the bot script to provide the necessary API keys and the subreddit you want to tweet from, you can run the bot on the command line:
 
-    python reddit_twitter_bot.py
+    python3 reddit_twitter_bot.py
  
 Look into the script itself for configuration options of the bot.
-
-##Have questions? Need help with the bot?
-
-If you're having issues with or have questions about the bot, please [file an issue](https://github.com/rhiever/reddit-twitter-bot/issues) in this repository so one of the project managers can get back to you. Please check the existing (and closed) issues to make sure your issue hasn't already been addressed.
