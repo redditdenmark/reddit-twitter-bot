@@ -102,7 +102,7 @@ def tweet_creator(subreddit_info):
 			
 			
 	# Get new, for tweeting announcements
-	for submission in subreddit_info.get_new(limit=30):
+	for submission in subreddit_info.get_new(limit=20):
 			if not already_tweeted(submission.id):
 				if submission.distinguished is not None:
 					if submission.id not in post_ids:
@@ -112,12 +112,7 @@ def tweet_creator(subreddit_info):
 						post_dict[submission.title] = {}
 						post = post_dict[submission.title]
 						post['link'] = submission.permalink
-
-						# Store the url the post points to (if any)
-						# If it's an imgur URL, it will later be downloaded and uploaded alongside the tweet
-#						post['img_path'] = get_image(submission.url)
-						post['flair'] = ''
-						
+						post['flair'] = ''					
 						# Get the Submission link flair
 						if submission.link_flair_text is not None:
 							post['flair'] = submission.link_flair_text.strip().lower();
